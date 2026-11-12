@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Chango';
+    src: url('font/chango/Chango-Regular.ttf');
+    font-weight: normal;
+}
+
+body {
+    background-color: #BBE2F9; 
+    font-family: 'Dmsans', sans-serif;
+    color: #134F88;
+}
+
+.navbar-placeholder {
+    height: 100px;
+    position: relative;
+    z-index: 100;
+}
+
+.hero-section {
+    position: relative;
+    padding: 0; 
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    max-height: 500px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.cloud-title-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%; 
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -55%); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+.z-index-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.info-section {
+    padding: 40px 0;
+}
+
+.page-title {
+    font-family: 'Chango', sans-serif;
+    font-size: 40px;
+    color: #5D5656;
+}
+
+.info-text p {
+    font-family: 'Dmsans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #134F88;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.reservation-card-wrapper {
+    position: relative;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.pink-shadow-layer {
+    position: absolute;
+    top: 25px;
+    left: 20px; 
+    width: 100%;
+    height: 100%;
+    
+    background-color: #FFC0CB;
+    border-radius: 333px; 
+    z-index: 0;
+}
+
+.yellow-card-layer {
+    position: relative;
+    z-index: 1;
+    background-color: #FFF9D2;
+    border-radius: 333px; 
+    padding: 100px 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title {
+    font-family: 'Chango', sans-serif;
+    font-size: 36px;
+    color: #134f88;
+    margin-bottom: 20px;
+}
+
+.pill-input {
+    border-radius: 50px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #555;
+    background-color: #fff;
+}
+.pill-input:focus {
+    box-shadow: none;
+}
+
+.pill-input-group {
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 5px 20px;
+    align-items: center;
+}
+
+.pill-input-group .input-group-text {
+    background: transparent;
+    border: none;
+    color: #555;
+    font-size: 18px;
+}
+
+.form-select {
+    box-shadow: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+}
+.form-select:focus {
+    box-shadow: none;
+}
+
+.btn-done {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 12px;
+    color: #555;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-done:hover {
+    background-color: #f0f0f0;
+    color: #134f88;
+}
+
+@media (max-width: 768px) {
+    .cloud-title-img { max-width: 80%; }
+    .pink-shadow-layer, .yellow-card-layer {
+        border-radius: 50px; 
+        padding: 60px 20px;
+    }
+}

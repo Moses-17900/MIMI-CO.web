@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Chango';
+    src: url('font/chango/Chango-Regular.ttf');
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Dmsans', sans-serif;
+    background-color: #FFF9D2;
+}
+
+.navbar-placeholder { height: 100px; position: relative; z-index: 100; }
+
+
+.rules-header {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    background-color: #FFF9D2;
+}
+
+.header-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.marquee-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 2;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    font-family: 'Chango', sans-serif;
+    font-size: 60px;
+    color: #C6E3FF; 
+    -webkit-text-stroke: 2px #FFF9D2;
+    font-weight: bold;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+.rules-content-section {
+    background-color: #C6E3FF;
+    padding: 60px 0 100px 0;
+    margin-top: -2px;
+}
+
+.section-title { font-family: 'Chango', sans-serif; font-size: 36px; text-transform: uppercase; }
+.text-dark-blue { color: #134f88; }
+.rules-text { max-width: 800px; color: #134f88; font-size: 16px; line-height: 1.6; }
+
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    width: 100%;
+    height: 400px; 
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.flip-card-front {
+    z-index: 2;
+}
+
+.img-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-yellow-dark { background-color: #FFF0B4; }
+.card-pink-dark { background-color: #FFB6C1; }
+
+.card-title {
+    font-family: 'Chango', sans-serif;
+    color: #134f88;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.flip-card-back i { color: rgba(19, 79, 136, 0.4); }
+
+
+@media (max-width: 768px) {
+    .rules-header { height: 250px; }
+    .marquee-content { font-size: 40px; }
+    .flip-card { height: 350px; }
+}
